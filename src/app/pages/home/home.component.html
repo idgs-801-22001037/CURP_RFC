@@ -1,0 +1,64 @@
+<div class="container py-5">
+  <h2 class="mb-4 text-center">Validación de CURP y RFC</h2>
+
+  <form>
+    <div class="mb-3">
+      <app-label forLabel="txtCurp" textLabel="CURP"></app-label>
+      <app-input
+        idInput="txtCurp"
+        placeholderInput="Ingresa tu CURP"
+        [(ngModel)]="curp"
+        claseExtra="mb-3"
+        name="curp"
+      ></app-input>
+    </div>
+
+    <div class="mb-3">
+      <app-label forLabel="txtRfc" textLabel="RFC"></app-label>
+      <app-input
+        idInput="txtRfc"
+        placeholderInput="Ingresa tu RFC"
+        [(ngModel)]="rfc"
+        claseExtra="mb-3"
+        name="rfc"
+      ></app-input>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2">
+      <app-btn
+        clasExtra="btn-primary"
+        iconBtn="bi bi-patch-check"
+        textBtn="Validar CURP"
+        (click)="validarCurp()"
+      ></app-btn>
+
+      <app-btn
+        clasExtra="btn-secondary"
+        iconBtn="bi bi-patch-check"
+        textBtn="Validar RFC"
+        (click)="validarRfc()"
+      ></app-btn>
+
+      <app-btn
+        clasExtra="btn-info"
+        iconBtn="bi bi-code-compare"
+        textBtn="Comparar CURP y RFC"
+        (click)="compararCurpRfc()"
+      ></app-btn>
+    </div>
+  </form>
+
+  <app-modal
+    [modalShow]="showModal"
+    (onClose)="showModal = false"
+    [clasBtnModal]="btnTypeModal"
+    [textBtnModal]="btnTextModal"
+    [iconBtnModal]="btnIconModal"
+    [titulo]="tituloModal"
+    [contenido]="contenidoModal"
+  ></app-modal>
+
+  <p class="mt-5 text-muted text-center">
+    Elaborado por: Joel Briones
+  </p>
+</div>

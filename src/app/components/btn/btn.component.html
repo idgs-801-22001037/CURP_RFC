@@ -1,0 +1,7 @@
+<!-- [textContent]="textBtn" lo que hace es 
+    remplazar el contenido del elemento por el valor de la variable textBtn
+    pero todo, incluyendo el icon-->
+<button type="button" [ngClass]="'btn'+' ' + clasExtra" >
+   <i [ngClass]="iconBtn"></i>
+   {{textBtn}}
+</button>

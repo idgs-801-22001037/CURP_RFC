@@ -1,0 +1,23 @@
+<div class="modal fade show d-block" *ngIf="modalShow" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{titulo}}</h5>
+      </div>
+      <div class="modal-body">
+        {{contenido}}
+      </div>
+      <div class="modal-footer">
+        <app-btn
+        clasExtra='{{clasBtnModal}}'
+        textBtn={{textBtnModal}}
+        iconBtn={{iconBtnModal}}
+        (click)="cerrarModal()"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Backdrop manual -->
+<div class="modal-backdrop fade show" *ngIf="modalShow"></div>

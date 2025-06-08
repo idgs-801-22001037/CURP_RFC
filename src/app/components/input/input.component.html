@@ -1,0 +1,11 @@
+<input
+  [type]="typeInput"
+  [id]="idInput"
+  [placeholder]="placeholderInput"
+  class="form-control"
+  [ngClass]="claseExtra"
+  [value]="value"
+  (input)="handleInput($event)"
+  (blur)="onTouched()"
+  [disabled]="disabled"
+/>
